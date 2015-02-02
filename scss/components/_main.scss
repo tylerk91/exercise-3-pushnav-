@@ -10,6 +10,7 @@ html {
 	-ms-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
 	text-size-adjust: 100%;
+	color: #788C84;
 }
 
 
@@ -19,12 +20,13 @@ html {
 
 
 body{
-  font-family: sans-serif;
+  font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
   @include zero;
   // Hides close button if there is no js
   &.noscript .close-btn, 
   &.noscript .toggle-btn{
       display: none;
+	  color: #788C84;
   }
 }
 
@@ -35,32 +37,46 @@ header {
     position: absolute;
     right: 1em;
     top: 0;
+	color: #788C84;
+	
   }
 }
 
 .navigation ul{
   @include zero;
+}
+  
   li{
     list-style-type: none;
-    a{
+  }
+    
+	a{
       display: block;
-      padding: .5em 1em;
-      text-align: center;
+      padding: 1em 3em;
+	  background-color: #788C84;
+      color: #FFFFFF;
+	  text-align: center;
       border-bottom: 1px solid $light-grey;
       text-decoration: none;
     }
-    &:first-child a{
+  }
+    
+	&:first-child a{
       border-top: 1px solid $light-grey;
     }
-  } // li
-} // .navigation ul
+
+} 
+
+// .navigation ul
 
 .toggle-btn, 
 .close-btn{
-  color: $text-color;
+ color: #788C84;
   height: 40px;
   width: 40px; 
-  i{
+}
+ 
+ i{
     border: 1px solid $light-grey;
     padding: .5em; 
   }
@@ -95,7 +111,7 @@ header {
     &[data-state='slide-open'] .sliding-canvas{
       transform: translateX(-100%);
     }
-
+  }
     &[data-state='slide-open']{
       // Allow expansion of navigation past page height, when open
       overflow:visible;
